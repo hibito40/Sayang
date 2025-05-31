@@ -40,32 +40,32 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
  minutes = Math.floor((time % (60 * 60)) / 60),
  seconds = Math.floor(time % 60);
  const data = [
- "Bạn không thể tìm được lệnh admin tại 'help' của MintBot",
- "Đừng mong chờ gì từ MintBot.",
- "Cái đoạn này á? Của SpermBot.",
- "Nếu muốn không lỗi lệnh thì hãy xài những lệnh có trong help vì những lệnh lỗi đã bị ẩn rồi.",
- "Đây là một con bot được các coder của MiraiProject nhúng tay vào.",
- "Muốn biết sinh nhật của Mint thì hãy xài 'birthday'.",
- "Cặc.",
- "Cút.",
- "Lồn.",
- "Bạn chưa biết.",
- "Bạn đã biết.",
- "Bạn sẽ biết.",
- "Không có gì là hoàn hảo, MintBot là ví dụ.",
+ "Báº¡n khÃ´ng thá»ƒ tÃ¬m Ä‘Æ°á»£c lá»‡nh admin táº¡i 'help' cá»§a MintBot",
+ "Äá»«ng mong chá» gÃ¬ tá»« MintBot.",
+ "CÃ¡i Ä‘oáº¡n nÃ y Ã¡? Cá»§a SpermBot.",
+ "Náº¿u muá»‘n khÃ´ng lá»—i lá»‡nh thÃ¬ hÃ£y xÃ i nhá»¯ng lá»‡nh cÃ³ trong help vÃ¬ nhá»¯ng lá»‡nh lá»—i Ä‘Ã£ bá»‹ áº©n rá»“i.",
+ "ÄÃ¢y lÃ  má»™t con bot Ä‘Æ°á»£c cÃ¡c coder cá»§a MiraiProject nhÃºng tay vÃ o.",
+ "Muá»‘n biáº¿t sinh nháº­t cá»§a Mint thÃ¬ hÃ£y xÃ i 'birthday'.",
+ "Cáº·c.",
+ "CÃºt.",
+ "Lá»“n.",
+ "Báº¡n chÆ°a biáº¿t.",
+ "Báº¡n Ä‘Ã£ biáº¿t.",
+ "Báº¡n sáº½ biáº¿t.",
+ "KhÃ´ng cÃ³ gÃ¬ lÃ  hoÃ n háº£o, MintBot lÃ  vÃ­ dá»¥.",
  "Mirai dropped.",
- "MintBot là MiraiProject nhưng module là idea của SpermBot.",
- "Bạn không biết cách sử dụng MintBot? Đừng dùng nữa.",
- "Muốn chơi game? Qua bot khác mà chơi đây không rảnh",
- "MintBot có thể hiểu phụ nữ nhưng không thể có được họ.",
- "MintBot cân spam nhưng không có gì đáng để bạn spam."
+ "MintBot lÃ  MiraiProject nhÆ°ng module lÃ  idea cá»§a SpermBot.",
+ "Báº¡n khÃ´ng biáº¿t cÃ¡ch sá»­ dá»¥ng MintBot? Äá»«ng dÃ¹ng ná»¯a.",
+ "Muá»‘n chÆ¡i game? Qua bot khÃ¡c mÃ  chÆ¡i Ä‘Ã¢y khÃ´ng ráº£nh",
+ "MintBot cÃ³ thá»ƒ hiá»ƒu phá»¥ ná»¯ nhÆ°ng khÃ´ng thá»ƒ cÃ³ Ä‘Æ°á»£c há».",
+ "MintBot cÃ¢n spam nhÆ°ng khÃ´ng cÃ³ gÃ¬ Ä‘Ã¡ng Ä‘á»ƒ báº¡n spam."
  ];
  var link = [
- "https://i.postimg.cc/QdgH08j6/Messenger-creation-C2-A39-DCF-A8-E7-4-FC7-8715-2559476-FEEF4.gif",
- "https://i.imgur.com/WXQIgMz.jpeg",
- "https://i.postimg.cc/QdgH08j6/Messenger-creation-C2-A39-DCF-A8-E7-4-FC7-8715-2559476-FEEF4.gif",
- "https://i.imgur.com/WXQIgMz.jpeg",
- "https://i.imgur.com/WXQIgMz.jpeg",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
  ];
 
  var i = 1;
@@ -86,7 +86,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
  }
  }
  var callback = () => 
- api.sendMessage({ body: `====「 ${namebot} 」====\n» Prefix system: ${PREFIX}\n» Prefix box: ${prefix}\n» Modules: ${commands.size}\n» Ping: ${Date.now() - dateNow}ms\n──────────────\n======「 ADMIN 」 ======\n${msg.join("\n")}\n──────────────\nBot has been working for ${hours} hour(s) ${minutes} minute(s) ${seconds} second(s)\n\n» Total users: ${global.data.allUserID.length} \n» Total threads: ${global.data.allThreadID.length}\n──────────────\n[thanks for using bot!!]`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
+ api.sendMessage({ body: `====ã€Œ ${namebot} ã€====\nÂ» Prefix system: ${PREFIX}\nÂ» Prefix box: ${prefix}\nÂ» Modules: ${commands.size}\nÂ» Ping: ${Date.now() - dateNow}ms\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n======ã€Œ ADMIN ã€ ======\n${msg.join("\n")}\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\nBot has been working for ${hours} hour(s) ${minutes} minute(s) ${seconds} second(s)\n\nÂ» Total users: ${global.data.allUserID.length} \nÂ» Total threads: ${global.data.allThreadID.length}\nâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n[thanks for using bot!!]`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
  return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/kensu.jpg")).on("close", () => callback()); 
  }
 }/**
@@ -99,7 +99,7 @@ module.exports.config = {
  version: "1.2.6",
  hasPermssion: 0,
  credits: "Shaon Ahmed",
- description: "🥰আসসালামু আলাইকুম 🥰",
+ description: "ðŸ¥°à¦†à¦¸à¦¸à¦¾à¦²à¦¾à¦®à§ à¦†à¦²à¦¾à¦‡à¦•à§à¦® ðŸ¥°",
  commandCategory: "For users",
  hide:true,
  usages: "",
@@ -136,32 +136,32 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
  minutes = Math.floor((time % (60 * 60)) / 60),
  seconds = Math.floor(time % 60);
  const data = [
- "Bạn không thể tìm được lệnh admin tại 'help' của MintBot",
- "Đừng mong chờ gì từ MintBot.",
- "Cái đoạn này á? Của SpermBot.",
- "Nếu muốn không lỗi lệnh thì hãy xài những lệnh có trong help vì những lệnh lỗi đã bị ẩn rồi.",
- "Đây là một con bot được các coder của MiraiProject nhúng tay vào.",
- "Muốn biết sinh nhật của Mint thì hãy xài 'birthday'.",
- "Cặc.",
- "Cút.",
- "Lồn.",
- "Bạn chưa biết.",
- "Bạn đã biết.",
- "Bạn sẽ biết.",
- "Không có gì là hoàn hảo, MintBot là ví dụ.",
+ "Báº¡n khÃ´ng thá»ƒ tÃ¬m Ä‘Æ°á»£c lá»‡nh admin táº¡i 'help' cá»§a MintBot",
+ "Äá»«ng mong chá» gÃ¬ tá»« MintBot.",
+ "CÃ¡i Ä‘oáº¡n nÃ y Ã¡? Cá»§a SpermBot.",
+ "Náº¿u muá»‘n khÃ´ng lá»—i lá»‡nh thÃ¬ hÃ£y xÃ i nhá»¯ng lá»‡nh cÃ³ trong help vÃ¬ nhá»¯ng lá»‡nh lá»—i Ä‘Ã£ bá»‹ áº©n rá»“i.",
+ "ÄÃ¢y lÃ  má»™t con bot Ä‘Æ°á»£c cÃ¡c coder cá»§a MiraiProject nhÃºng tay vÃ o.",
+ "Muá»‘n biáº¿t sinh nháº­t cá»§a Mint thÃ¬ hÃ£y xÃ i 'birthday'.",
+ "Cáº·c.",
+ "CÃºt.",
+ "Lá»“n.",
+ "Báº¡n chÆ°a biáº¿t.",
+ "Báº¡n Ä‘Ã£ biáº¿t.",
+ "Báº¡n sáº½ biáº¿t.",
+ "KhÃ´ng cÃ³ gÃ¬ lÃ  hoÃ n háº£o, MintBot lÃ  vÃ­ dá»¥.",
  "Mirai dropped.",
- "MintBot là MiraiProject nhưng module là idea của SpermBot.",
- "Bạn không biết cách sử dụng MintBot? Đừng dùng nữa.",
- "Muốn chơi game? Qua bot khác mà chơi đây không rảnh",
- "MintBot có thể hiểu phụ nữ nhưng không thể có được họ.",
- "MintBot cân spam nhưng không có gì đáng để bạn spam."
+ "MintBot lÃ  MiraiProject nhÆ°ng module lÃ  idea cá»§a SpermBot.",
+ "Báº¡n khÃ´ng biáº¿t cÃ¡ch sá»­ dá»¥ng MintBot? Äá»«ng dÃ¹ng ná»¯a.",
+ "Muá»‘n chÆ¡i game? Qua bot khÃ¡c mÃ  chÆ¡i Ä‘Ã¢y khÃ´ng ráº£nh",
+ "MintBot cÃ³ thá»ƒ hiá»ƒu phá»¥ ná»¯ nhÆ°ng khÃ´ng thá»ƒ cÃ³ Ä‘Æ°á»£c há».",
+ "MintBot cÃ¢n spam nhÆ°ng khÃ´ng cÃ³ gÃ¬ Ä‘Ã¡ng Ä‘á»ƒ báº¡n spam."
  ];
  var link = [
- "https://i.postimg.cc/QdgH08j6/Messenger-creation-C2-A39-DCF-A8-E7-4-FC7-8715-2559476-FEEF4.gif",
- "https://i.imgur.com/WXQIgMz.jpeg",
- "https://i.postimg.cc/QdgH08j6/Messenger-creation-C2-A39-DCF-A8-E7-4-FC7-8715-2559476-FEEF4.gif",
- "https://i.imgur.com/WXQIgMz.jpeg",
- "https://i.imgur.com/WXQIgMz.jpeg",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
+ "https://photos.app.goo.gl/swMtXNYGE91XEPbQ8",
 
  ]; 
  var i = 1;
@@ -183,17 +183,17 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
  }
  var callback = () => 
  api.sendMessage({ body: 
- `🍀----আসসালামু আলাইকুম----🍀
+ `ðŸ€----à¦†à¦¸à¦¸à¦¾à¦²à¦¾à¦®à§ à¦†à¦²à¦¾à¦‡à¦•à§à¦®----ðŸ€
 
-┏━━•❅•••❈•••❈•••❅•━━┓\n\n「 ${namebot} 」\n\n┗━━•❅•••❈•••❈•••❅•━━┛ \n\n______________________________\n\n↓↓_𝗥𝗢𝗕𝗢𝗧 𝗦𝗬𝗦𝗧𝗘𝗠 𝗜𝗡𝗙𝗢_↓↓\n\n» 𝗣𝗿𝗲𝗳𝗶𝘅 𝘀𝘆𝘀𝘁𝗲𝗺: ${PREFIX}\n\n» 𝗣𝗿𝗲𝗳𝗶𝘅 𝗯𝗼𝘅: ${prefix}\n\n» 𝗧𝗼𝘁𝗮𝗹 𝗠𝗼𝗱𝘂𝗹𝗲𝘀: ${commands.size}\n\n» 𝗣𝗶𝗻𝗴: ${Date.now() - dateNow}ms\n______________________________\n\n ↓↓_𝗥𝗢𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥 𝗜𝗡𝗙𝗢_↓↓\n\n 
-𝗡𝗔𝗠𝗘 :>ULLASH
+â”â”â”â€¢â…â€¢â€¢â€¢âˆâ€¢â€¢â€¢âˆâ€¢â€¢â€¢â…â€¢â”â”â”“\n\nã€Œ ${namebot} ã€\n\nâ”—â”â”â€¢â…â€¢â€¢â€¢âˆâ€¢â€¢â€¢âˆâ€¢â€¢â€¢â…â€¢â”â”â”› \n\n______________________________\n\nâ†“â†“_ð—¥ð—¢ð—•ð—¢ð—§ ð—¦ð—¬ð—¦ð—§ð—˜ð—  ð—œð—¡ð—™ð—¢_â†“â†“\n\nÂ» ð—£ð—¿ð—²ð—³ð—¶ð˜… ð˜€ð˜†ð˜€ð˜ð—²ð—º: ${PREFIX}\n\nÂ» ð—£ð—¿ð—²ð—³ð—¶ð˜… ð—¯ð—¼ð˜…: ${prefix}\n\nÂ» ð—§ð—¼ð˜ð—®ð—¹ ð— ð—¼ð—±ð˜‚ð—¹ð—²ð˜€: ${commands.size}\n\nÂ» ð—£ð—¶ð—»ð—´: ${Date.now() - dateNow}ms\n______________________________\n\n â†“â†“_ð—¥ð—¢ð—•ð—¢ð—§ ð—¢ð—ªð—¡ð—˜ð—¥ ð—œð—¡ð—™ð—¢_â†“â†“\n\n 
+ð—¡ð—”ð— ð—˜ :>Abrar fahim
 
-𝗢𝘄𝗻𝗲𝗿 𝗜𝗱 𝗹𝗶𝗻𝗸:☞https://www.facebook.com/profile.php?id=100086680386976
+ð—¢ð˜„ð—»ð—²ð—¿ ð—œð—± ð—¹ð—¶ð—»ð—¸:â˜žhttps://www.facebook.com/profile.php?id=100090183762638
 
-𝗪𝗵𝗮𝘁𝘀𝗮𝗽𝗽☞01631813286
+ð—ªð—µð—®ð˜ð˜€ð—®ð—½ð—½â˜ž01631813286
 
-______________________________\n\n----↓↓𝙍𝙤𝙗𝙤𝙩 𝙖𝙘𝙩𝙞𝙫𝙚 𝙩𝙞𝙢𝙚↓↓----\n\n ${hours} : ${minutes} : ${seconds} second(s)\n\n______________________________\n» 𝗧𝗢𝗧𝗔𝗟 𝗨𝗦𝗘𝗥𝗦: ${global.data.allUserID.length} \n\n» 𝗧𝗢𝗧𝗔𝗟 𝗚𝗥𝗢𝗨𝗣: ${global.data.allThreadID.length}\n______________________________\n\n thanks for using \n 𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 
-\n--------------------------------------------------\n\n☢️☣️⚠️`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
+______________________________\n\n----â†“â†“ð™ð™¤ð™—ð™¤ð™© ð™–ð™˜ð™©ð™žð™«ð™š ð™©ð™žð™¢ð™šâ†“â†“----\n\n ${hours} : ${minutes} : ${seconds} second(s)\n\n______________________________\nÂ» ð—§ð—¢ð—§ð—”ð—Ÿ ð—¨ð—¦ð—˜ð—¥ð—¦: ${global.data.allUserID.length} \n\nÂ» ð—§ð—¢ð—§ð—”ð—Ÿ ð—šð—¥ð—¢ð—¨ð—£: ${global.data.allThreadID.length}\n______________________________\n\n thanks for using \n ð‚ð˜ðð„ð‘ â˜¢ï¸_ð–£˜ -ððŽð“ âš ï¸ 
+\n--------------------------------------------------\n\nâ˜¢ï¸â˜£ï¸âš ï¸`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
  return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/kensu.jpg")).on("close", () => callback()); 
  }
 }
