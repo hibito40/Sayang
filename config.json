@@ -1,6 +1,6 @@
 {
     "language": "en",
-    "keyActive": "",
+    "keyActive": "bot",
     "DeveloperMode": false,
     "autoCreateDB": true,
     "notiGroup": true,
@@ -16,15 +16,15 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️",
-    "PREFIX": "/",
+    "BOTNAME": "Fahima😚🤞",
+    "PREFIX": "#",
     "ADMINBOT": [
-        "100000478146113",
-        "61576520552554",
-        "61550035211214"
+        "100090183762638",
+        "61574000055067",
+        "61574000055067"
     ],
     "NDH": [
-        "100000478146113"
+        "100090183762638"
     ],
     "DATABASE": {
         "sqlite": {
