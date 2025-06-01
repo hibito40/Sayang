@@ -1,25 +1,46 @@
+const axios = require("axios");
+
 module.exports.config = {
-  name: "imagine",
-  version: "1.0.",
-  hasPermssion: 0,
-  credits: "𝐂𝐘𝐁𝐄𝐑 ☢️_𖣘 -𝐁𝐎𝐓 ⚠️ 𝑻𝑬𝑨𝑴_ ☢️",
-  description: "generate image from polination",
-  commandCategory: "image",
-  usages: "query",
-  cooldowns: 2,
+  name: "flux",
+  version: "2.0",
+  role: 0,
+  author: "Dipto",
+  description: "Flux Image Generator",
+  category: "𝗜𝗠𝗔𝗚𝗘 𝗚𝗘𝗡𝗘𝗥𝗔𝗧𝗢𝗥",
+  premium: true,
+  guide: "{pn} [prompt] --ratio 1024x1024\n{pn} [prompt]",
+  countDown: 15,
 };
-module.exports.run = async ({api, event, args }) => {
-const axios = require('axios');
-const fs = require('fs-extra');
- let { threadID, messageID } = event;
-  let query = args.join(" ");
-  if (!query) return api.sendMessage("put text/query", threadID, messageID);
-let path = __dirname + `/cache/poli.png`;
-  const poli = (await axios.get(`https://image.pollinations.ai/prompt/${query}`, {
-    responseType: "arraybuffer",
-  })).data;
-  fs.writeFileSync(path, Buffer.from(poli, "utf-8"));
-  api.sendMessage({
-    body: `“${query}” 𝗜𝗺𝗮𝗴𝗲 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱`,
-    attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID);
+
+module.exports.onStart = async ({ event, args, api }) => {
+  const dipto = "https://www.noobs-api.rf.gd/dipto";
+
+  try {
+    const prompt = args.join(" ");
+    const [prompt2, ratio = "1:1"] = prompt.includes("--ratio")
+      ? prompt.split("--ratio").map(s => s.trim())
+      : [prompt, "1:1"];
+
+    const startTime = Date.now();
+    
+    const waitMessage = await api.sendMessage("Generating image, please wait... 😘", event.threadID);
+    api.setMessageReaction("🫠", event.messageID, () => {}, true);
+
+    const apiurl = `${dipto}/flux?prompt=${encodeURIComponent(prompt2)}&ratio=${encodeURIComponent(ratio)}`;
+    const response = await axios.get(apiurl, { responseType: "stream" });
+
+    const timeTaken = ((Date.now() - startTime) / 1000).toFixed(2);
+
+    api.setMessageReaction("✅", event.messageID, () => {}, true);
+    api.unsendMessage(waitMessage.messageID);
+
+    api.sendMessage({
+      body: `Here's your image (Generated in ${timeTaken} seconds)`,
+      attachment: response.data,
+    }, event.threadID, event.messageID);
+    
+  } catch (e) {
+    console.error(e);
+    api.sendMessage("Error: " + e.message, event.threadID, event.messageID);
+  }
 };
